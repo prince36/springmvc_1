@@ -4,11 +4,17 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet"
-          href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet" >
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <title>Produkt</title>
 </head>
 <body>
+    <jsp:include page="module/navbar.jsp" />
+
+
 <section>
     <div class="jumbotron">
         <div class="container">
@@ -44,5 +50,7 @@
         </div>
     </div>
 </section>
+
+    <jsp:include page="module/footer.jsp" />
 </body>
 </html>

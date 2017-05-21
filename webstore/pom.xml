@@ -23,6 +23,13 @@
 			<scope>provided</scope>
 		</dependency>
 
+	  <dependency>
+		  <groupId>org.springframework.security</groupId>
+		  <artifactId>spring-security-bom</artifactId>
+		  <version>4.0.4.RELEASE</version>
+		  <scope>compile</scope>
+	  </dependency>
+
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-webmvc</artifactId>

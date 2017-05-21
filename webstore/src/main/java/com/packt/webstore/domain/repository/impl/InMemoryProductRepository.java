@@ -69,10 +69,17 @@ public class InMemoryProductRepository implements ProductRepository{
 	samsung.setManufacturer("Samsung");
 	samsung.setUnitsInStock(1000);
 
+	Product samsung1 = new Product("P1238","Samsung s8", new BigDecimal(1100));
+	samsung1.setDescription("Samsung S8, smartfon z 6-calowym ekranem o rozdzielczości 640×1136 i 20 megapikselowym aparatem");
+	samsung1.setCategory("smartfon");
+	samsung1.setManufacturer("Samsung");
+	samsung1.setUnitsInStock(1000);
+
     listOfProducts.add(iphone);
     listOfProducts.add(laptop_dell);
     listOfProducts.add(tablet_Nexus);
     listOfProducts.add(samsung);
+    listOfProducts.add(samsung1);
 	}
 
 	public List<Product> getAllProducts() {
@@ -94,5 +101,8 @@ public class InMemoryProductRepository implements ProductRepository{
 		}
 		
 		return productById;
+	}
+	public void addProduct(Product product) {
+		listOfProducts.add(product);
 	}
 }

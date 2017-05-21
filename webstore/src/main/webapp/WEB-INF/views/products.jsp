@@ -4,11 +4,11 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet"
-		  href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet" >
 	<title>Produkty</title>
 </head>
 <body>
+<jsp:include page="module/navbar.jsp" />
 <section>
 	<div class="jumbotron">
 		<div class="container">
@@ -42,5 +42,7 @@
 		</c:forEach>
 	</div>
 </section>
+
+<jsp:include page="module/footer.jsp" />
 </body>
 </html>
