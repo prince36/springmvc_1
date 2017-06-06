@@ -24,6 +24,11 @@
 </section>
 <section class="container">
     <div class="row">
+
+        <div class="col-md-5">
+            <img src="<c:url value="/resources/images/${product.productId}.png"></c:url>" alt="<c:url value="${product.productId}"></c:url>" style = "width:100%"/>
+        </div>
+
         <div class="col-md-5">
             <h3>${product.name}</h3>
             <p>${product.description}</p>

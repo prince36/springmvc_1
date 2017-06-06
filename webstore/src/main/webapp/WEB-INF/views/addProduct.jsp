@@ -5,7 +5,7 @@
   Time: 19:10
   To change this template use File | Settings | File Templates.
 --%>
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"  %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -28,7 +28,7 @@
     </div>
 </section>
 <section class="container">
-    <form:form  modelAttribute="newProduct" class="form-horizontal">
+    <form:form  modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
         <fieldset>
             <legend>Dodaj nowy produkt</legend>
 
@@ -85,21 +85,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label class="control-label col-lg-2" for="unitsInOrder">Liczba zamawianych sztuk</label>
-                <div class="col-lg-10">
-                    <form:input id="unitsInOrder" path="unitsInOrder" type="text" class="form:input-large"/>
-                </div>
-            </div>
 
-
-            <div class="form-group">
-                <label class="control-label col-lg-2" for="discontinued">Wycofany</label>
-                <div class="col-lg-10">
-                    <form:checkbox id="discontinued" path="discontinued"
-                                   class="form:checkbox"/>
-                </div>
-            </div>
 
             <div class="form-group">
                 <label class="control-label col-lg-2" for="condition">Stan</label>
@@ -107,6 +93,15 @@
                     <form:radiobutton path="condition" value="New" />Nowy
                     <form:radiobutton path="condition" value="Old" />Używany
                     <form:radiobutton path="condition" value="Refurbished" />Odnowiony
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="productImage">
+                    <spring:message code="addProduct.form.productImage.label"/>
+                </label>
+                <div class="col-lg-10">
+                    <form:input id="productImage" path="productImage" type="file" class="form:input-large"/>
                 </div>
             </div>
 
